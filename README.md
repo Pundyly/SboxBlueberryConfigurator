@@ -1,4 +1,4 @@
-# 🫐 S&box Blueberry Configurator 🫐
+# 🫐 Blueberry — S&box Graphics Configurator
 
 A small, user-friendly GUI application (written in Go + [Fyne](https://fyne.io)) that helps you generate a ready-to-use `graphics_config.vcfg` for S&box. Use it to quickly toggle graphics options and save a configuration file directly into your S&box installation.
 
@@ -30,31 +30,28 @@ To make S&box execute the config automatically on launch, add this to Steam Laun
 
 This ensures the game applies your custom graphics settings every time it starts.
 
-## Build & Run
+## Run — executable (.exe)
 
-Prerequisites:
-- Go (1.19+ recommended)
-- Fyne (v2+) — see https://fyne.io for installation instructions
+This application is commonly distributed as a standalone Windows executable (`.exe`). If you have a prebuilt executable:
 
-Build:
-- git clone <repo>
-- cd <repo>
-- go build -o blueberry
+- Windows:
+  - Double-click the `sboxblueberrycongigurator.exe` to open the GUI.
+  - Or open a command prompt, navigate to the folder containing `sboxblueberrycongigurator.exe` and run:
+    blueberry.exe
+
+- If you prefer running from the command line it will launch the same GUI; there are no required command-line arguments by default.
+
+If you ship the `.exe` in a release, include a small note for users to unblock the file if Windows prevents execution (right-click → Properties → Unblock).
+
+## Build & Run (from source)
+
+## Run
 
 Run:
-- ./blueberry
-or
-- go run ./...
-
-The application opens a simple GUI where you can set options, choose the S&box installation folder, and save the config.
+- On Windows: double-click `sboxblueberrycongigurator.exe` or run it from PowerShell/cmd.
+- On macOS/Linux: ./blueberry (or run with go run ./... during development)
 
 ## Config file format
-
-The generated `graphics_config.vcfg` contains:
-- A header comment describing the file (human-readable).
-- One option per line in the format:
-  key value
-- Boolean values are written as `1` (enabled) or `0` (disabled).
 
 Example:
 ```
@@ -70,11 +67,8 @@ r_post_processing 0
   - Ensure the file is saved to `<sbox_root>/core/cfg/graphics_config.vcfg`.
   - Confirm you added `-exec graphics_config.vcfg` to Steam's Launch Options for S&box.
 - If the app cannot write the file, check folder write permissions and verify the selected path is correct.
+- On Windows, if the `.exe` won't run, check Antivirus/smart screen settings and try unblocking the file in Properties.
 
 ## Contributing
 
 Contributions, issues, and suggestions are welcome. Please open an issue or a pull request in the repository.
-
-## License
-
-Choose an appropriate license for your project (e.g., MIT, Apache 2.0). If none chosen yet, consider adding a LICENSE file.
