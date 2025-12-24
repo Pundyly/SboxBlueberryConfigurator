@@ -32,3 +32,17 @@ It allows users to set graphical options through a simple interface and save the
 - **Bottom:** Large "Save to vcfg" button stretched across the window width (`container.NewBorder + container.NewMax`).
 
 ---
+
+## Steam Launch Option
+
+To automatically apply the configuration on game start, add the following to **Steam Launch Options**:
+
+-exec graphics_config.vcfg
+
+
+Make sure the `graphics_config.vcfg` file is saved in:
+
+<path_to_sbox>/core/cfg/graphics_config.vcfg
+
+
+This ensures the game executes your custom graphics configuration every time it launches.
