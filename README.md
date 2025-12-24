@@ -25,14 +25,6 @@ It allows users to set graphical options through a simple interface and save the
 
 ---
 
-## Interface Layout
-
-- **Top:** Welcome text, brief description, Path Entry + Select Folder button.
-- **Center:** Scrollable list of options (`container.NewVScroll`) filling available space.
-- **Bottom:** Large "Save to vcfg" button stretched across the window width (`container.NewBorder + container.NewMax`).
-
----
-
 ## Steam Launch Option
 
 To automatically apply the configuration on game start, add the following to **Steam Launch Options**:
