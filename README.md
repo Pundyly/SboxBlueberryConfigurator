@@ -2,17 +2,6 @@
 
 A small, user-friendly GUI application (written in Go + [Fyne](https://fyne.io)) that helps you generate a ready-to-use `graphics_config.vcfg` for S&box. Use it to quickly toggle graphics options and save a configuration file directly into your S&box installation.
 
-## Features
-
-- Lightweight GUI for editing common S&box graphics options (booleans, integers, floats, and text).
-- Boolean options shown as checkboxes; numeric and text options use input fields.
-- Top-level Path field to specify your S&box root folder manually or with a folder picker.
-- "Select Folder" button to open a folder selection dialog.
-- "Save" button:
-  - Ensures the target folder `<path>/core/cfg` exists (creates it if missing).
-  - Writes `graphics_config.vcfg` with a header comment and key/value lines.
-  - Booleans are written as `1` (true) or `0` (false).
-
 ## Why use this
 
 - Avoid manual editing and formatting mistakes in `graphics_config.vcfg`.
