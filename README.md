@@ -1,4 +1,4 @@
-# 🫐 Blueberry — S&box Graphics Configurator
+# 🫐 S&box Blueberry Configurator 🫐
 
 A small, user-friendly GUI application (written in Go + [Fyne](https://fyne.io)) that helps you generate a ready-to-use `graphics_config.vcfg` for S&box. Use it to quickly toggle graphics options and save a configuration file directly into your S&box installation.
 
