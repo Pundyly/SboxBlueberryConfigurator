@@ -1,4 +1,4 @@
-# S&box Blueberry Configurator
+# 🫐 S&box Blueberry Configurator 🫐
 
 A lightweight GUI application written in **Go + Fyne** for generating a `graphics_config.vcfg` file for **S&box**.  
 It allows users to set graphical options through a simple interface and save them directly to the game’s configuration folder.
