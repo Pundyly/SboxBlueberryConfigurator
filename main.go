@@ -86,7 +86,6 @@ func main() {
 		{"r_grass_quality", "Grass quality", KindInt, "0"},
 		{"r_water_quality", "Water quality", KindInt, "0"},
 		{"r_water_draw_reflection", "Water draw reflection", KindBool, "0"},
-		{"r_water_draw_refraction", "Water draw refraction", KindBool, "0"},
 
 		{"r_texture_pool_size", "Texture pool size (VRAM MB)", KindInt, "1024"},
 		{"r_texture_lod_scale", "Texture LOD scale", KindFloat, "2.5"},
@@ -118,9 +117,11 @@ func main() {
 		default:
 			e := widget.NewEntry()
 			e.SetText(o.DefaultText)
-			e.Validator = nil
 			controls[o.Key] = e
-			row := container.NewHBox(widget.NewLabel(o.Label), e)
+			row := container.NewGridWithColumns(2,
+				widget.NewLabel(o.Label),
+				e,
+			)
 			objs = append(objs, row)
 		}
 	}
